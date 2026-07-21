@@ -35,3 +35,9 @@ service vendor.sensors /vendor/bin/sscrpcd sensorspd
     group system wakelock
     capabilities BLOCK_SUSPEND
     shutdown critical
+    # IchthysOS/AOSP-17 a52sxq bringup: sscrpcd internally loops forever ("daemon will
+    # restart after 100ms") failing to reach the ADSP sensor PD, flooding init's
+    # control-message queue (dropping keystore2's interface_start -> boot hang) AND
+    # saturating pstore so the real early-boot error is invisible. DISABLE it entirely
+    # for now (sensors are non-critical for first boot); revisit once ADSP bring-up done.
+    disabled

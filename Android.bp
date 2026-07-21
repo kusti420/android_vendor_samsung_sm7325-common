@@ -12743,6 +12743,9 @@ prebuilt_etc_xml {
 cc_prebuilt_binary {
     name: "adpl",
     owner: "samsung",
+    // IchthysOS/AOSP-17: adpl needs rmnet_* symbols that the lineage-24.0 librmnetctl
+    // (dataservices) no longer exports (blob-vs-lib version skew). Skip the ELF dep check.
+    check_elf_files: false,
     target: {
         android_arm64: {
             srcs: [
