@@ -7,7 +7,6 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/samsung/sm7325-common/proprietary/system_ext/etc/permissions/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/audiosphere.xml \
-    vendor/samsung/sm7325-common/proprietary/system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/com.android.hotwordenrollment.common.util.xml \
     vendor/samsung/sm7325-common/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
     vendor/samsung/sm7325-common/proprietary/vendor/etc/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
     vendor/samsung/sm7325-common/proprietary/vendor/etc/charger_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fstab.qti \
@@ -266,7 +265,6 @@ PRODUCT_PACKAGES += \
     libq3dtools_esx \
     android.hardware.bluetooth@1.0-impl-qti \
     android.hardware.gnss@2.1-impl-qti \
-    sound_trigger.primary.lahaina \
     vendor.qti.hardware.qseecom@1.0-impl \
     vendor.samsung.hardware.bluetooth.a2dp@1.0-impl \
     vendor.samsung.hardware.gnss@2.0-impl-sec \
@@ -587,10 +585,7 @@ PRODUCT_PACKAGES += \
     vendor_lib_rfsa_adsp_libsnpe_dsp_v68_domains_v3_skel_so \
     CACertService \
     TimeService \
-    HotwordEnrollmentOKGoogleEx3HEXAGON \
-    HotwordEnrollmentXGoogleEx3HEXAGON \
     audiosphere \
-    com.android.hotwordenrollment.common.util \
     android.hardware.gnss@2.1-service-qti.xml \
     manifest_android.hardware.drm@1.3-service.widevine.xml \
     vendor.samsung.hardware.thermal@1.0-manifest.xml \
